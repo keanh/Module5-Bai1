@@ -1,101 +1,84 @@
 import "./scss/styles.scss";
-/**
- * Variable and Data type
- */
 
-// tslint:disable
 
-/**
- * var vs let/const
- */
-/*
-function main() {
-  console.log("START");
-  if (true) {
-    var lang = "vi";
-    let target = "en-us";
-    console.log("inside block");
+(function main() {
+    console.log("START");
+    if (true) {
+        var lang = "vi";
+        var target = "en-us";
+        console.log("inside block");
+        console.log(target);
+    }
+    console.log(lang);
     console.log(target);
-  }
-  console.log(lang);
-  console.log(target);
-}
- */
-/*
-function main() {
-  var x = 5;
-  console.log(x);
-  var x = 10;
-  console.log(x);
+})();
 
-  let y = 55;
-  console.log(y);
-  let y = 100;
-  console.log(y);
-}
-*/
+(function main() {
+    var x = 5;
+    console.log(x);
+    var x = 10;
+    console.log(x);
 
-/*
-function main() {
-  console.log(x);
-  var x = 5;
+    let y = 55;
+    console.log(y);
+    y = 100;
+    console.log(y);
+})();
 
-  console.log(y);
-  let y = 10;
-}
- */
+(function main() {
+    console.log(x);
+    var x = 5;
 
-/**
- * Data types
- */
-/*
-function main() {
-  let message: string;
-  let total: number = 100;
-  let isProduction = true;
-  let prices: Array<number> = [120, 88, 60];
-  let languages: string[] = ['vi', 'en-us'];
-  let now = new Date();
-  let unknown: any;
+    console.log(y);
+    var y = 10;
+})();
 
-  enum Direction {
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
-  };
+(function main() {
+    let message: string;
+    let total: number = 100;
+    let isProduction = true;
+    let prices: Array<number> = [120, 88, 60];
+    let languages: string[] = ['vi', 'en-us'];
+    let now = new Date();
+    let unknown: any;
 
-  function log(msg: string): void {
-    console.log(msg)
-  }
+    enum Direction {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    };
 
-  interface IPost {
-    id: string;
-    title: string;
-    body?: string;
-  }
+    function log(msg: string): void {
+        console.log(msg)
+    }
 
-  isProduction = false;
-  unknown = Direction.UP;
-  unknown = 'changed';
+    interface IPost {
+        id: string;
+        title: string;
+        body?: string;
+    }
 
-  const post: IPost = {
+    isProduction = false;
+    unknown = Direction.UP;
+    unknown = 'changed';
 
-  };
-  message = 50;
+    const post: IPost = {
+        id: 'id1',
+        title: 'title1'
+    };
+    message = '50';
 
-  function getPost(postId: string): IPost {
-    // do something to retrieve post
-    return {
-      id: postId,
-      title: 'Post Title',
-      body: 'Post Body',
-      extra: 'data'
-    } as IPost;
-  }
-}
- */
-
+    function getPost(postId: string): IPost {
+        // do something to retrieve post
+        return {
+            id: postId,
+            title: 'Post Title',
+            body: 'Post Body',
+            extra: 'data'
+        } as IPost;
+    }
+})();
 function main() {}
 
 // tslint:enable
